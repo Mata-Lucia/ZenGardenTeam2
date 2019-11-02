@@ -25,11 +25,11 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  color: $color-2;
+  font-weight: bold;
+}
+
 p {
   color: lighten($color-2, 15%);
-
-  a {
-    color: $color-3;
-    text-decoration: underline;
-  }
 }
