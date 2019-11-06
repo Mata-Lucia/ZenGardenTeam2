@@ -1,0 +1,81 @@
+// Layout for small screens
+
+// Header
+
+.intro header, .summary {
+    text-align: center;
+    padding: 0 10%;
+}
+
+// Paragraphs
+
+.preamble {
+    padding: 5% 10% 0 10%;
+}
+
+.preamble h3 {
+    text-align: center;
+}
+
+.main-supporting {
+    padding: 5% 10% 0 10%;
+}
+
+.main-supporting h3 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+// Other Designs links
+
+.design-selection h3 {
+    text-align: center;
+}
+
+.design-selection ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    grid-gap: 3%;
+    padding: 10%;
+    justify-items: center
+}
+
+.design-selection li:nth-child(n+6){
+    display:none;
+}
+
+// Bottom links
+
+.zen-resources h3, .design-archives h3 {
+    display: none;
+}
+
+.design-archives ul {
+    text-align: right;
+    padding-right: 10%;
+}
+
+.design-archives li {
+    display: inline-block;
+}
+
+.zen-resources ul {
+    text-align: center;
+}
+
+.zen-resources li {
+    display: inline-block;
+    float: none;
+}
+
+.zen-resources li + li::before {
+    content: " | ";
+}
+
+.design-archives li + li::before {
+    content: " | ";
+}

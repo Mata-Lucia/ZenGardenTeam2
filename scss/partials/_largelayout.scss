@@ -1,0 +1,43 @@
+// Layout for large screens
+
+@media screen and (min-width: 600px) {
+
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary, header {
+        grid-column: 1 / span 2;
+    }
+
+    .main-supporting {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explanation {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .participation {
+        grid-area: 1;
+        grid-row: 2;
+    }
+
+    .benefits {
+        grid-column-start: 2;
+        grid-row: 3;
+    }
+
+    .requirements {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
