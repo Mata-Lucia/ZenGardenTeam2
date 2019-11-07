@@ -41,6 +41,7 @@
       content: 'Candy Shop';
       font-family: $tertiary-font;
       font-size: 5rem;
+      font-weight: 300;
       line-height: 4.5rem;
       text-shadow: 0 2px 0 darken($color-2, 25%);
     }
@@ -54,4 +55,5 @@
     margin: 0;
     text-align: right;
     text-shadow: 0 1px 0 darken($color-2, 25%);
+    font-weight: 300;
 }

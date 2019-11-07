@@ -4,15 +4,15 @@ body {
 }
 
 p {
-  color: #ed4b64;
+  color: #666666;
 }
 p a:link, p a:visited {
-  color: #d61533;
+  color: #404040;
   text-decoration: none;
   font-weight: bold;
 }
 p a:hover {
-  color: #f491a0;
+  color: #8c8c8c;
   text-decoration: underline;
 }
 p a:active {
@@ -20,7 +20,7 @@ p a:active {
 }
 p::selection {
   color: #FBF9EF;
-  background: #ed4b64;
+  background: #666666;
 }
 
 .page-wrapper {
@@ -31,25 +31,6 @@ p::selection {
 
 .preamble, .participation, .requirements {
   background-color: rgba(243, 168, 184, 0.3);
-}
-.preamble p, .participation p, .requirements p {
-  color: #69c2c8;
-}
-.preamble p a:link, .preamble p a:visited, .participation p a:link, .participation p a:visited, .requirements p a:link, .requirements p a:visited {
-  color: #3da1a7;
-  text-decoration: none;
-  font-weight: bold;
-}
-.preamble p a:hover, .participation p a:hover, .requirements p a:hover {
-  color: #a1d9dd;
-  text-decoration: underline;
-}
-.preamble p a:active, .participation p a:active, .requirements p a:active {
-  color: #FBD433;
-}
-.preamble p::selection, .participation p::selection, .requirements p::selection {
-  color: #FBF9EF;
-  background: #69c2c8;
 }
 .preamble h3, .participation h3, .requirements h3 {
   color: #69c2c8;
@@ -106,13 +87,14 @@ h3 {
   color: #ed4b64;
   font-size: 2.4rem;
   line-height: 2.4rem;
+  font-weight: 300;
 }
 
 h3.select {
   font-family: "Poppins", sans-serif;
   color: #FBF9EF;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -320,6 +302,7 @@ footer {
   content: "Candy Shop";
   font-family: "Modak", cursive;
   font-size: 5rem;
+  font-weight: 300;
   line-height: 4.5rem;
   text-shadow: 0 2px 0 #a81128;
 }
@@ -332,6 +315,7 @@ footer {
   margin: 0;
   text-align: right;
   text-shadow: 0 1px 0 #a81128;
+  font-weight: 300;
 }
 
 .zen-resources {
