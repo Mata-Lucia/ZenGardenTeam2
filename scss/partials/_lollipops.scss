@@ -1,0 +1,30 @@
+.design-name {
+    text-transform: uppercase;
+}
+
+.designer-name {
+    font-size: .8rem;
+}
+
+.design-selection nav ul {
+    z-index: 1;
+}
+.design-selection nav ul li {
+    padding: auto;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    &::after {
+        content: ' ';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        margin-left: -50%;
+        top: 50%;
+        margin-top: -50%;
+        background-color: $color-1;
+        border-radius: 50%;
+        z-index: -1;
+    }
+}

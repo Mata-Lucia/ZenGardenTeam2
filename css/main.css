@@ -1,5 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Modak|Pacifico|Poppins&display=swap");
 body {
   background-color: #FBF9EF;
+}
+
+p {
+  color: #ed4b64;
+}
+p a:link, p a:visited {
+  color: #d61533;
+  text-decoration: none;
+  font-weight: bold;
+}
+p a:hover {
+  color: #f491a0;
+  text-decoration: underline;
+}
+p a:active {
+  color: #FBD433;
+}
+p::selection {
+  color: #FBF9EF;
+  background: #ed4b64;
+}
+
+.page-wrapper {
+  border: 1px solid #ed4b64;
+  border-top: none;
+  border-bottom: none;
+}
+
+.preamble, .participation, .requirements {
+  background-color: rgba(243, 168, 184, 0.3);
+}
+.preamble p, .participation p, .requirements p {
+  color: #69c2c8;
+}
+.preamble p a:link, .preamble p a:visited, .participation p a:link, .participation p a:visited, .requirements p a:link, .requirements p a:visited {
+  color: #3da1a7;
+  text-decoration: none;
+  font-weight: bold;
+}
+.preamble p a:hover, .participation p a:hover, .requirements p a:hover {
+  color: #a1d9dd;
+  text-decoration: underline;
+}
+.preamble p a:active, .participation p a:active, .requirements p a:active {
+  color: #FBD433;
+}
+.preamble p::selection, .participation p::selection, .requirements p::selection {
+  color: #FBF9EF;
+  background: #69c2c8;
+}
+.preamble h3, .participation h3, .requirements h3 {
+  color: #69c2c8;
+}
+
+.sidebar {
+  background-color: rgba(105, 194, 200, 0.8);
+  color: #FBF9EF;
+}
+.sidebar a:link, .sidebar a:visited {
+  color: #FBF9EF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar a:hover {
+  color: #FBD433;
+  text-decoration: underline;
+}
+.sidebar a:active {
+  color: #FBD433;
+}
+
+footer {
+  background-color: #ed4b64;
+  color: #FBF9EF;
+}
+footer a:link, footer a:visited {
+  color: #FBF9EF;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #FBD433;
+  text-decoration: underline;
+}
+footer a:active {
+  color: #FBD433;
 }
 
 /* -------------------------------- 
@@ -9,29 +96,42 @@ xTypography
 -------------------------------- */
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
-}
-
-h1 {
-  font-family: "Pacifico", cursive;
-  color: #ed4b64;
-  font-size: 2.4rem;
-  font-weight: 300;
-}
-
-h2 {
-  color: #ed4b64;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1rem;
+  color: #69c2c8;
 }
 
 h3 {
+  text-align: center;
+  font-family: "Pacifico", cursive;
   color: #ed4b64;
-  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
 }
 
-p {
-  color: #f491a0;
+h3.select {
+  font-family: "Poppins", sans-serif;
+  color: #FBF9EF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 1.2rem;
+}
+
+.summary {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.page-wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 450px) {
+  .page-wrapper {
+    max-width: 400px;
+  }
 }
 
 .intro header, .summary {
@@ -39,27 +139,29 @@ p {
   padding: 0 10%;
 }
 
-.preamble {
-  padding: 5% 10% 0 10%;
+.summary {
+  margin-top: 2rem;
 }
 
-.preamble h3 {
-  text-align: center;
+.preamble, .explanation, .participation, .benefits, .requirements {
+  padding: 5% 10% 75px 10%;
+  position: relative;
 }
-
-.main-supporting {
-  padding: 5% 10% 0 10%;
-}
-
-.main-supporting h3 {
-  text-align: center;
+.preamble::after, .explanation::after, .participation::after, .benefits::after, .requirements::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  padding: 0;
+  background: url(../images/gumdrop-blue.svg) repeat-x;
+  background-size: contain;
+  background-position: -50%;
 }
 
 footer {
-  text-align: center;
-}
-
-.design-selection h3 {
   text-align: center;
 }
 
@@ -76,74 +178,225 @@ footer {
   display: none;
 }
 
-.zen-resources h3, .design-archives h3 {
+.design-archives h3, .zen-resources h3 {
   display: none;
 }
-
-.design-archives ul {
-  text-align: right;
-  padding-right: 10%;
-}
-
-.design-archives li {
-  display: inline-block;
-}
-
-.zen-resources ul {
+.design-archives ul, .zen-resources ul {
   text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-
-.zen-resources li {
+.design-archives li, .zen-resources li {
   display: inline-block;
-  float: none;
 }
-
-.zen-resources li + li::before {
+.design-archives li + li::before, .zen-resources li + li::before {
   content: " | ";
 }
 
-.design-archives li + li::before {
-  content: " | ";
+@media screen and (min-width: 600px) {
+  .page-wrapper {
+    max-width: 700px;
+  }
 }
-
+@media screen and (min-width: 600px) and (min-width: 1000px) {
+  .page-wrapper {
+    max-width: 900px;
+  }
+}
 @media screen and (min-width: 600px) {
   .intro {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
+}
+@media screen and (min-width: 600px) {
   .summary, header {
     grid-column: 1/span 2;
   }
-
+}
+@media screen and (min-width: 600px) {
   .main-supporting {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
+}
+@media screen and (min-width: 600px) {
   .explanation {
     grid-column: 2;
     grid-row: 1;
   }
-
+}
+@media screen and (min-width: 600px) {
   .participation {
     grid-area: 1;
     grid-row: 2;
   }
-
+}
+@media screen and (min-width: 600px) {
   .benefits {
     grid-column-start: 2;
     grid-row: 3;
   }
-
+}
+@media screen and (min-width: 600px) {
   .requirements {
     grid-column: 1/span 2;
     grid-row: 4;
   }
-
+}
+@media screen and (min-width: 600px) {
   footer {
     display: none;
   }
+}
+@media screen and (min-width: 600px) {
+  .preamble, .participation {
+    padding-bottom: 5%;
+  }
+  .preamble::after, .participation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: url(../images/gumdrop-blue.svg) repeat;
+    background-size: 30px 30px;
+    background-position: -50%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .explanation, .benefits {
+    padding-bottom: 5%;
+  }
+  .explanation::after, .benefits::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: url(../images/gumdrop-blue.svg) repeat;
+    background-size: 30px 30px;
+    background-position: -50%;
+  }
+}
+.intro header {
+  position: relative;
+  margin: 0 -25px 0 -25px;
+  background: repeating-linear-gradient(to right, #ed4b64, #ed4b64 50px, #f3a8b8 50px, #f3a8b8 100px);
+}
+.intro header::after {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 50px;
+  background-size: 100px 25px;
+  background-image: url("http://kimiswhimsies.com/images/scallop.svg");
+  background-repeat: repeat-x;
+  bottom: -50px;
+  left: 0;
+}
+
+.intro header h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8rem;
+  margin: 0 0 0 3rem;
+  color: #FBF9EF;
+  text-shadow: 0 2px 0 #a81128;
+}
+.intro header h1:after {
+  display: block;
+  margin-left: -3rem;
+  text-align: center;
+  content: "Candy Shop";
+  font-family: "Modak", cursive;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  text-shadow: 0 2px 0 #a81128;
+}
+
+.intro header h2 {
+  font-family: "Pacifico", cursive;
+  text-transform: none;
+  font-size: 1.5rem;
+  color: #FBF9EF;
+  margin: 0;
+  text-align: right;
+  text-shadow: 0 1px 0 #a81128;
+}
+
+.zen-resources {
+  display: block;
+  content: " ";
+  height: 50px;
+  position: relative;
+  margin: 50px -25px 0 -25px;
+  background: repeating-linear-gradient(to right, #ed4b64, #ed4b64 50px, #f3a8b8 50px, #f3a8b8 100px);
+}
+@supports (transform: scaleY(-1)) {
+  .zen-resources::after {
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 50px;
+    background-size: 100px 25px;
+    background-image: url("http://kimiswhimsies.com/images/scallop.svg");
+    background-repeat: repeat-x;
+    bottom: 50px;
+    left: 0;
+    transform: scaleY(-1);
+  }
+}
+
+.design-name {
+  text-transform: uppercase;
+}
+
+.designer-name {
+  font-size: 0.8rem;
+}
+
+.design-selection nav ul {
+  z-index: 1;
+}
+
+.design-selection nav ul li {
+  padding: auto;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+.design-selection nav ul li::after {
+  content: " ";
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  top: 50%;
+  margin-top: -50%;
+  background-color: #69c2c8;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

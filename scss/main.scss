@@ -2,3 +2,14 @@
 @import 'partials/typography';
 @import 'partials/smalllayout';
 @import 'partials/largelayout';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/lollipops';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}

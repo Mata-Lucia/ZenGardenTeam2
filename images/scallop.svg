@@ -1,0 +1,4 @@
+<svg class="scallops" width="100px" height="25px" xmlns="http://www.w3.org/2000/svg">
+    <circle class="circle1" width="100px" height="100px" cy="0" cx="25px" r="25px" fill="#ed4b64" />
+    <circle class="circle2" width="100px" height="100px" cy="0" cx="75px" r="25px" fill="#f3a8b8" />
+</svg>

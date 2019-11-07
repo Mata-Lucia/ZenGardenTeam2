@@ -1,12 +1,92 @@
-// color palette - these colors will be the color swatches of the Colors section
-
+//basic color palette
 $color-1: #69c2c8; // Downy - bright turquoise
 $color-2: #ed4b64; // Mandy - bright pink
 $color-3: #f3a8b8; // Wewak - light pink
 $color-4: #FBD433; // Bright Sun - yellow
 $color-5: #FBF9EF; // Bianca - cream
 
+@mixin link-states($base-color) {
+    @if $base-color == $color-5{
+        a {
+            &:link, &:visited {
+            color: $color-5;
+            text-decoration: none;
+            font-weight: bold;
+            }
+            &:hover {
+            color: $color-4;
+            text-decoration: underline;
+            }
+            &:active {
+            color: $color-4;
+            }
+        }
+    }
+    @else {
+        a {
+            &:link, &:visited {
+            color: darken($base-color, 15%);
+            text-decoration: none;
+            font-weight: bold;
+            }
+            &:hover {
+            color: lighten($base-color, 15%);
+            text-decoration: underline;
+            }
+            &:active {
+            color: $color-4;
+            }
+        }
+    }
+}
+
+@mixin colored-row {
+    background-color: rgba($color-3, .3);
+    p {
+        color: $color-1;
+        @include link-states($color-1);
+        @include selection($color-1);
+    }
+    h3 {
+        color: $color-1;
+    }
+}
+
+@mixin selection($text-color) {
+    &::selection {
+        color: $color-5;
+        background: $text-color;
+    }
+}
+
 body {
     background-color: $color-5;
+}
 
+p {
+    color: $color-2;
+    @include link-states($color-2);
+    @include selection($color-2);
+}
+
+.page-wrapper {
+    border: 1px solid $color-2;
+    border-top: none;
+    border-bottom: none;
+}
+
+.preamble, .participation, .requirements {
+    @include colored-row;
+}
+
+.sidebar {
+    background-color: rgba($color-1, .8);
+    color: $color-5;
+    @include link-states($color-5);
+}
+
+footer {
+    background-color: $color-2;
+    color: $color-5;
+    @include link-states($color-5);
 }

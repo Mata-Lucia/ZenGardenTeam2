@@ -1,4 +1,5 @@
 // fonts
+@import url('https://fonts.googleapis.com/css?family=Modak|Pacifico|Poppins&display=swap');
 $primary-font: 'Poppins', sans-serif;
 $secondary-font: 'Pacifico', cursive;
 $tertiary-font: 'Modak', cursive;
@@ -10,26 +11,30 @@ xTypography
 -------------------------------- */
 body {
   font-family: $primary-font;
-  font-size: 1.4rem;
-}
-h1 {
-  font-family: $secondary-font;
-  color: $color-2;
-  font-size: 2.4rem;
-  font-weight: 300;
-}
-
-h2 {
-  color: $color-2;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1rem;
+  color: $color-1;
 }
 
 h3 {
+  text-align: center;
+  font-family: $secondary-font;
   color: $color-2;
-  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
 }
 
-p {
-  color: lighten($color-2, 15%);
+h3.select {
+  font-family: $primary-font;
+  color: $color-5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 1.2rem;
+}
+
+.summary {
+  font-size: .9rem;
+  font-style: italic;
 }

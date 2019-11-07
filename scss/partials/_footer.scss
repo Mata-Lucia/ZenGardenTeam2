@@ -1,0 +1,23 @@
+
+.zen-resources {
+    display:block;
+    content: ' ';
+    height: 50px;
+    position: relative;
+    margin: 50px -25px 0 -25px;
+    background: repeating-linear-gradient(
+      to right, 
+      $color-2, 
+      $color-2 50px, 
+      $color-3 50px, 
+      $color-3 100px); 
+    
+    @supports(transform: scaleY(-1)){
+        &::after {
+            @include scallop-edge;
+            bottom: 50px;
+            left: 0;
+            transform: scaleY(-1);
+        }
+    }   
+}
