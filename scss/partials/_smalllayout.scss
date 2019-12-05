@@ -31,17 +31,46 @@ $border-height: 75px;
         display:block;
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: -10px;
         width: 100%;
         height: $border-height;
         padding: 0;
-        background: url(../images/jellybean-block.svg) repeat-x;
-        background-size: contain;
-        background-position: -50%;
+        z-index: 2;
+        background: url(../images/gumdrop-row.svg) center bottom repeat-x;
+    }
+
+    & h3 {
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-top: .5em;
+        &::after {
+            display:block;
+            content: '';
+            width: 100px;
+            height: 50px;
+        }
     }
 }
 
+.preamble h3::after {
+    background: url(../images/icons/tootsie-green.svg) center no-repeat;
+}
+.explanation h3::after {
+    background: url(../images/icons/tootsie-yellow.svg) center no-repeat;
+}
+.participation h3::after {
+    background: url(../images/icons/tootsie-red.svg) center no-repeat;
+}
+.benefits h3::after {
+    background: url(../images/icons/tootsie-green.svg) center no-repeat;
+}
+.requirements h3::after {
+    background: url(../images/icons/tootsie-red.svg) center no-repeat;
+}
+
 footer {
+    padding-top: 1em;
     text-align: center;
 }
 
@@ -49,11 +78,10 @@ footer {
 
 .design-selection ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr;
     list-style: none;
     grid-gap: 3%;
-    padding: 10%;
-    justify-items: center
+    margin-bottom: 3em;
 }
 
 .design-selection li:nth-child(n+6){
@@ -63,6 +91,7 @@ footer {
 // Bottom links
 
 .design-archives, .zen-resources {
+
     h3 {
         display: none;
     }

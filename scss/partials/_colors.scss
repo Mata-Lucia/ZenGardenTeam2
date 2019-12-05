@@ -4,7 +4,7 @@ $color-2: #ed4b64; // Mandy - bright pink
 $color-3: #f3a8b8; // Wewak - light pink
 $color-4: #FBD433; // Bright Sun - yellow
 $color-5: #FBF9EF; // Bianca - cream
-$color-6: #666666; // gray
+$color-6: #513914; // chocolate brown
 
 @mixin link-states($base-color) {
     @if $base-color == $color-5{
@@ -21,6 +21,9 @@ $color-6: #666666; // gray
             &:active {
             color: $color-4;
             }
+            &:focus {
+            border: 1px dotted $color-6;
+            }
         }
     }
     @else {
@@ -36,6 +39,9 @@ $color-6: #666666; // gray
             }
             &:active {
             color: $color-4;
+            }
+            &:focus {
+            border: 1px dotted $color-6;
             }
         }
     }
@@ -65,10 +71,8 @@ p {
     @include selection($color-6);
 }
 
-.page-wrapper {
-    border: 1px solid $color-2;
-    border-top: none;
-    border-bottom: none;
+.summary {
+    border-bottom: 1rem solid $color-2;
 }
 
 .preamble, .participation, .requirements {
