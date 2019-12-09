@@ -98,11 +98,10 @@ h3 {
 }
 
 h3.select {
-  font-family: "Poppins", sans-serif;
-  color: #FBF9EF;
-  font-size: 1.5rem;
+  font-family: "Pacifico", cursive;
+  color: #ed4b64;
+  font-size: 2rem;
   font-weight: 300;
-  text-transform: uppercase;
   text-align: center;
   margin: 0;
   padding: 1.2rem;
@@ -191,7 +190,7 @@ footer {
 }
 
 .select, .design-name, .next a, .viewall a, .designer-name, .select li {
-  color: #513914 !important;
+  color: #513914;
 }
 
 .design-selection ul {
