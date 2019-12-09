@@ -186,6 +186,14 @@ footer {
   text-align: center;
 }
 
+.wrapper {
+  background: url(../images/lolly-block.svg) repeat;
+}
+
+.select, .design-name, .next a, .viewall a, .designer-name, .select li {
+  color: #513914 !important;
+}
+
 .design-selection ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -335,6 +343,11 @@ footer {
     justify-items: center;
   }
 }
+@media screen and (min-width: 600px) {
+  .wrapper {
+    background: #69c2c8;
+  }
+}
 .intro header {
   position: relative;
   margin: 0 -25px 0 -25px;
@@ -423,6 +436,7 @@ footer {
   }
 
   .design-selection nav ul li {
+    height: 350px;
     padding: auto;
     text-align: center;
     position: relative;
@@ -430,16 +444,21 @@ footer {
   }
   .design-selection nav ul li::after {
     content: " ";
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     position: absolute;
     left: 50%;
-    margin-left: -50%;
+    margin-left: -110%;
     top: 50%;
-    margin-top: -50%;
+    margin-top: -60%;
     background-color: #69c2c8;
-    border-radius: 50%;
     z-index: -1;
+    background: url(../images/icons/lollipop-pink.svg) center no-repeat;
+  }
+
+  .design-selection nav ul li:hover:after {
+    transition: all 1.5s ease-in-out;
+    transform: scale(0.5) rotate(360deg);
   }
 }
 * {

@@ -75,6 +75,13 @@ footer {
 }
 
 // Other Designs links
+.wrapper {
+    background: url(../images/lolly-block.svg) repeat;
+}
+
+.select, .design-name, .next a, .viewall a, .designer-name, .select li {
+    color: #513914 !important;
+}
 
 .design-selection ul {
     display: grid;
