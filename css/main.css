@@ -537,7 +537,7 @@ footer {
     left: 50%;
     margin-left: -110%;
     top: 50%;
-    margin-top: -60%;
+    margin-top: -70%;
     background-color: #69c2c8;
     z-index: -1;
     background: url(../images/icons/lollipop-pink.svg) center no-repeat;
@@ -547,9 +547,9 @@ footer {
     display: none;
   }
 
-  .design-selection nav ul li:hover:after {
+  .design-selection nav ul li:hover {
     transition: all 1.5s ease-in-out;
-    transform: scale(0.5) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
   }
 }
 * {
