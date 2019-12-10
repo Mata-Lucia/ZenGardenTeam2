@@ -15,12 +15,22 @@
     }
 }
 
+@mixin hover-card {
+    & h3 {
+        text-shadow: 2px 2px 3px lighten($color-4, 15%);
+    }
+    & h3::after {
+        opacity: 100%;
+        animation: candy-dance 1s linear infinite;
+    }
+}
+
 @media screen and (min-width: 600px) {
     // Wrapper
-    .page-wrapper {
+    .page-wrapper, .extra1 {
     max-width: 700px;
     @media screen and (min-width: 1000px) {
-            max-width: 900px;
+            max-width: 1000px;
         }
     }
 
@@ -93,6 +103,12 @@
         background-size: 150px 150px;
     }
 
+    .preamble, .explanation, .participation, .benefits, .requirements {
+        &:hover {
+            @include hover-card;
+        }
+    }
+
     .design-selection ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -101,6 +117,10 @@
     }
 
     .wrapper {
-        background: #69c2c8;
+        background: rgba($color-1, .1);
+    }
+
+    .zen-resources {
+        padding-bottom: 50px;
     }
 }

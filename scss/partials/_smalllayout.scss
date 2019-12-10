@@ -2,7 +2,7 @@
 $border-height: 75px;
 
 // Wrapper
-.page-wrapper {
+.page-wrapper, .extra1 {
     max-width: 300px;
     margin: 0 auto;
     @media screen and (min-width: 450px) {
@@ -76,11 +76,7 @@ footer {
 
 // Other Designs links
 .wrapper {
-    background: url(../images/lolly-block.svg) repeat;
-}
-
-.select, .design-name, .next a, .viewall a, .designer-name, .select li {
-    color: #513914;
+    background: url(../images/lollipop-row.svg) bottom repeat-x, rgba($color-1, .1);
 }
 
 .design-selection ul {
@@ -89,6 +85,22 @@ footer {
     list-style: none;
     grid-gap: 3%;
     margin-bottom: 3em;
+    padding: 0 10%;
+    li::before {
+        content:'';
+        display:inline-block;
+        height: 22px;
+        width: 22px;
+        background: url(../images/icons/peppermint-red.svg) center no-repeat;
+        background-size: 22px 22px;
+        transform: rotate(-45deg) translateY(5px);
+    }
+}
+
+.design-selection li:hover{
+    &::before {
+        animation: candy-bounce 1s linear infinite;
+    }
 }
 
 .design-selection li:nth-child(n+6){
@@ -98,6 +110,8 @@ footer {
 // Bottom links
 
 .design-archives, .zen-resources {
+    //background-color: $color-1;
+    padding-top: 1em;
 
     h3 {
         display: none;
@@ -114,4 +128,12 @@ footer {
     li + li::before {
         content: " | ";
     }
+}
+
+.design-archives {
+    text-transform: uppercase;
+}
+
+.zen-resources {
+    padding-bottom: 105px;
 }

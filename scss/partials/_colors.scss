@@ -9,6 +9,7 @@ $color-6: #513914; // chocolate brown
 @mixin link-states($base-color) {
     @if $base-color == $color-5{
         a {
+            transition: all .3s ease-in;
             &:link, &:visited {
             color: $color-5;
             text-decoration: none;
@@ -28,6 +29,7 @@ $color-6: #513914; // chocolate brown
     }
     @else {
         a {
+            transition: all .2s ease-in;
             &:link, &:visited {
             color: darken($base-color, 15%);
             text-decoration: none;
@@ -62,6 +64,10 @@ $color-6: #513914; // chocolate brown
 }
 
 body {
+    background-color: $color-6;
+}
+
+.page-wrapper {
     background-color: $color-5;
 }
 

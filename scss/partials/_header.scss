@@ -32,13 +32,13 @@
     text-align: left;
     font-size: .8rem;
     margin:0 0 0 3rem;
-    color: $color-5;
-    text-shadow: 0 2px 0 darken($color-2, 25%);
+    color: lighten($color-6, 10%);
     &:after {
       display: block;
       margin-left: -3rem;
       text-align: center;
       content: 'Candy Shop';
+      color: lighten($color-2, 35%);
       font-family: $tertiary-font;
       font-size: 5rem;
       font-weight: 300;
@@ -51,9 +51,8 @@
     font-family: $secondary-font;
     text-transform: none;
     font-size: 1.5rem;
-    color: $color-5;
+    color: lighten($color-6, 10%);
     margin: 0;
     text-align: right;
-    text-shadow: 0 1px 0 darken($color-2, 25%);
     font-weight: 300;
 }
