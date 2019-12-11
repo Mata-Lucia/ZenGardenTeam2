@@ -290,7 +290,7 @@ footer {
 
 @media screen and (min-width: 600px) {
   .page-wrapper, .extra1 {
-    max-width: 700px;
+    max-width: 800px;
   }
 }
 @media screen and (min-width: 600px) and (min-width: 1000px) {
@@ -535,18 +535,27 @@ footer {
     height: 300px;
     position: absolute;
     left: 50%;
-    margin-left: -110%;
+    margin-left: -150%;
     top: 50%;
     margin-top: -70%;
     background-color: #69c2c8;
     z-index: -1;
     background: url(../images/icons/lollipop-pink.svg) center no-repeat;
+    background-size: 25%;
   }
-
+}
+@media screen and (min-width: 600px) and (min-width: 800px) {
+  .design-selection nav ul li::after {
+    background-size: 40%;
+    margin-left: -110%;
+  }
+}
+@media screen and (min-width: 600px) {
   .design-selection nav ul li::before {
     display: none;
   }
-
+}
+@media screen and (min-width: 600px) {
   .design-selection nav ul li:hover {
     transition: all 1.5s ease-in-out;
     transform: scale(1.2) rotate(360deg);
