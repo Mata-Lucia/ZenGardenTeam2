@@ -24,9 +24,9 @@
             @include scallop-edge;
             margin: 50px -25px 0 -25px;
             width: calc(100% + 50px);
-            bottom: 50px;
+            bottom: 49px;
             left: 0;
-            transform: scaleY(-1) translateY(-1px);
+            transform: scaleY(-1);
         }
     }   
 }

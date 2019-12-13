@@ -1,40 +1,45 @@
-.design-name {
-    text-transform: uppercase;
-}
-
-.designer-name {
-    font-size: .8rem;
-}
-
-
 @media screen and (min-width: 600px) {
     .design-selection nav ul {
         z-index: 1;
+        font-size: .8rem;
+        & li {
+            width: 100%;
+            max-width: 100px;
+            text-align: center;
+        }
     }
 
-    .design-selection nav ul li {
-        height: 350px;
-        padding: auto;
-        text-align: center;
+    .design-selection nav ul li a:first-child {
+        &:link {
+            font-size: 1rem;
+            line-height: 1.1rem;
+            color: darken($color-2, 25%);
+            text-shadow: 0px 0px 3px $color-5, 0px 0px 5px $color-5, 0px 2px $color-5;
+        }
+        &:hover {
+            color: darken($color-2, 10%);
+            text-decoration: none;
+        }
+    }
+
+    .design-name {
+        display:block;
+        width: 100%;
+        height: 200px;
         position: relative;
+        padding-top: 2rem;
         z-index: 5;
+
         &::after {
             content: ' ';
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 200px;
             position: absolute;
-            left: 50%;
-            margin-left: -150%;
-            top: 50%;
-            margin-top: -70%;
-            background-color: $color-1;
+            left: 0;
+            bottom: 0;
             z-index: -1;
             background: url(../images/icons/lollipop-pink.svg) center no-repeat;
-            background-size: 25%;
-            @media screen and (min-width: 800px) {
-                background-size: 40%;
-                margin-left: -110%;
-            }
+            background-size: 100px 200px;
         }
     }
 
@@ -42,8 +47,8 @@
         display:none;
     }
 
-    .design-selection nav ul li:hover {
-        transition: all 1.5s ease-in-out;
-        transform: scale(1.2) rotate(360deg);
+    .design-selection .design-name:hover {
+        transition: all 1.2s ease-in-out;
+        transform: scale(1.4) rotate(360deg);
     }
 }
