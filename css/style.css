@@ -1,3 +1,6 @@
+/*****************************************
+/*     Base Color Scheme                */
+/****************************************/
 @import url("https://fonts.googleapis.com/css?family=Modak|Pacifico|Poppins&display=swap");
 body {
   background-color: #513914;
@@ -90,6 +93,9 @@ footer a:focus {
   border: 1px dotted #513914;
 }
 
+/*****************************************
+/*     Candy Animation Keyframes        */
+/****************************************/
 @keyframes candy-bounce {
   0% {
     transform: rotate(-45deg) translateY(5px);
@@ -127,11 +133,9 @@ footer a:focus {
     transform: rotate(0deg);
   }
 }
-/* -------------------------------- 
-
-xTypography 
-
--------------------------------- */
+/*****************************************
+/*              Typography              */
+/****************************************/
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -158,6 +162,9 @@ h3.select {
   font-style: italic;
 }
 
+/*****************************************
+/*     Grid Layout for Small Screens    */
+/****************************************/
 .page-wrapper, .extra1 {
   max-width: 300px;
   margin: 0 auto;
@@ -288,6 +295,9 @@ footer {
   padding-bottom: 105px;
 }
 
+/*****************************************
+/*     Grid Layout for Large Screens    */
+/****************************************/
 @media screen and (min-width: 600px) {
   .page-wrapper, .extra1 {
     max-width: 800px;
@@ -310,7 +320,7 @@ footer {
   }
 }
 @media screen and (min-width: 600px) {
-  .main-supporting {
+  .main.supporting {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -429,6 +439,9 @@ footer {
     padding-bottom: 50px;
   }
 }
+/*****************************************
+/*     Scalloped Header and Title       */
+/****************************************/
 .intro header {
   position: relative;
   margin: 0 -25px 0 -25px;
@@ -478,6 +491,9 @@ footer {
   font-weight: 300;
 }
 
+/*****************************************
+/*     Scalloped Footer Background      */
+/****************************************/
 .extra1 {
   display: block;
   content: "";
@@ -510,6 +526,9 @@ footer {
   }
 }
 
+/*****************************************
+/*     Rotating Lollipop Footer Nav     */
+/****************************************/
 @media screen and (min-width: 600px) {
   .design-selection nav ul {
     z-index: 1;
@@ -570,4 +589,4 @@ body {
   padding: 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,6 @@
-// Layout for large screens
+/*****************************************
+/*     Grid Layout for Large Screens    */
+/****************************************/
 
 @mixin grid-block($side) {
     padding-bottom: 5%;
@@ -43,7 +45,7 @@
         grid-column: 1 / span 2;
     }
 
-    .main-supporting {
+    .main.supporting {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }

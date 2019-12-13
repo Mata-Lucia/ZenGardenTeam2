@@ -1,4 +1,7 @@
-// Layout for small screens
+/*****************************************
+/*     Grid Layout for Small Screens    */
+/****************************************/
+
 $border-height: 75px;
 
 // Wrapper
@@ -52,6 +55,8 @@ $border-height: 75px;
         }
     }
 }
+
+// Section Borders
 
 .preamble h3::after {
     background: url(../images/icons/tootsie-green.svg) center no-repeat;

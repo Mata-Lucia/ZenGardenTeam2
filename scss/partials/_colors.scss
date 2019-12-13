@@ -6,6 +6,8 @@ $color-4: #FBD433; // Bright Sun - yellow
 $color-5: #FBF9EF; // Bianca - cream
 $color-6: #513914; // chocolate brown
 
+// Mixins for Link States
+
 @mixin link-states($base-color) {
     @if $base-color == $color-5{
         a {
@@ -62,6 +64,10 @@ $color-6: #513914; // chocolate brown
         background: $text-color;
     }
 }
+
+/*****************************************
+/*     Base Color Scheme                */
+/****************************************/
 
 body {
     background-color: $color-6;
